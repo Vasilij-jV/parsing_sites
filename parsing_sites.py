@@ -61,7 +61,7 @@ def write_cmc_top(nac, name_cripto):
         print(e)
 
 
-# Создаю новый файл с названием, сформированным из текущего времени
+# Создаю новый файл с названием, сформированным из текущего времениb
 cripto_title = ['Name', 'MC', 'MP']
 
 name_and_capitalization = parser()
