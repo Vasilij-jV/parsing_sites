@@ -52,7 +52,7 @@ def write_cmc_top(nac, name_cripto):
         # Добаваляю эти данные и отформатированное текущее время в список
         cripto_value.append(name_cripto)
         cripto_value.append(total_sum_capitalization)
-        cripto_value.append(f'{percent}%')
+        cripto_value.append(f'{int(percent)}%')
         now = datetime.now()
         formatted_time = now.strftime("%H.%M %d.%m.%Y")
         cripto_value.append(formatted_time)
@@ -65,7 +65,7 @@ def write_cmc_top(nac, name_cripto):
 cripto_title = ['Name', 'MC', 'MP']
 
 name_and_capitalization = parser()
-c_v = write_cmc_top(name_and_capitalization, name_cripto='USDC')
+c_v = write_cmc_top(name_and_capitalization, name_cripto='BNB')
 file_name = c_v[3]
 with open(file_name, 'a', newline='') as some_file:
     writer = csv.writer(some_file, delimiter=' ')
